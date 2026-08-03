@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>✦ Donde el Universo Encontró su Hogar al Pronunciar Tu Alma ✦</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at 50% 20%,rgba(120,170,255,.18),transparent 30%),
+radial-gradient(circle at 80% 10%,rgba(255,170,255,.10),transparent 25%),
+radial-gradient(circle at 20% 80%,rgba(110,220,255,.08),transparent 30%),
+#03040b;
+
+overflow-x:hidden;
+
+font-family:'Cormorant Garamond',serif;
+
+color:white;
+
+min-height:100vh;
+
+}
+
+
+/*=========================
+ESTRELLAS
+==========================*/
+
+#stars{
+
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:-20;
+
+}
+
+.star{
+
+position:absolute;
+
+border-radius:50%;
+
+background:white;
+
+animation:
+twinkle linear infinite,
+floatStar linear infinite;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.star:hover{
+
+transform:scale(2);
+
+box-shadow:
+
+0 0 25px white,
+
+0 0 60px #8ddcff,
+
+0 0 120px #9f6fff;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes floatStar{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+/*=========================
+AURORAS
+==========================*/
+
+.aurora{
+
+position:fixed;
+
+width:1200px;
+
+height:1200px;
+
+border-radius:50%;
+
+filter:blur(140px);
+
+opacity:.18;
+
+mix-blend-mode:screen;
+
+animation:auroraMove 25s linear infinite;
+
+pointer-events:none;
+
+z-index:-15;
+
+}
+
+.a1{
+
+background:#74e3ff;
+
+top:-500px;
+left:-250px;
+
+}
+
+.a2{
+
+background:#d26eff;
+
+bottom:-500px;
+right:-300px;
+
+animation-duration:35s;
+
+}
+
+@keyframes auroraMove{
+
+0%{
+
+transform:translate(0,0) rotate(0deg);
+
+}
+
+50%{
+
+transform:translate(140px,90px) rotate(180deg);
+
+}
+
+100%{
+
+transform:translate(0,0) rotate(360deg);
+
+}
+
+}
+
+
+/*=========================
+CRISTAL
+==========================*/
+
+#intro{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+position:relative;
+
+}
+
+#crystal{
+
+width:220px;
+
+height:220px;
+
+background:
+
+linear-gradient(145deg,
+rgba(255,255,255,.08),
+rgba(130,220,255,.03));
+
+backdrop-filter:blur(12px);
+
+clip-path:polygon(
+50% 0%,
+90% 20%,
+100% 55%,
+78% 100%,
+22% 100%,
+0% 55%,
+10% 20%
+);
+
+border:
+
+1px solid rgba(255,255,255,.25);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+cursor:pointer;
+
+animation:
+
+crystalFloat 6s ease-in-out infinite,
+
+crystalGlow 5s infinite;
+
+transition:.6s;
+
+}
+
+#crystal:hover{
+
+transform:scale(1.08);
+
+}
+
+@keyframes crystalFloat{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+@keyframes crystalGlow{
+
+0%,100%{
+
+box-shadow:
+
+0 0 40px rgba(120,180,255,.25),
+
+0 0 90px rgba(170,120,255,.18);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 90px rgba(180,230,255,.7),
+
+0 0 160px rgba(160,90,255,.4);
+
+}
+
+}
+
+
+/*=========================
+ALMA
+==========================*/
+
+#soul{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+
+0 0 20px white,
+
+0 0 50px #91e5ff,
+
+0 0 100px #b77cff;
+
+animation:
+
+pulseSoul 2s infinite;
+
+}
+
+@keyframes pulseSoul{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.35);
+
+}
+
+}
+
+
+/*=========================
+MENSAJE
+==========================*/
+
+#touch{
+
+margin-top:45px;
+
+font-family:'Cinzel',serif;
+
+letter-spacing:5px;
+
+font-size:13px;
+
+opacity:.8;
+
+animation:fadeTouch 2s infinite;
+
+}
+
+@keyframes fadeTouch{
+
+50%{
+
+opacity:.25;
+
+}
+
+}
+
+
+/*=========================
+POEMA
+==========================*/
+
+#poem{
+
+max-width:900px;
+
+margin:auto;
+
+padding:
+
+100px 30px 180px;
+
+display:none;
+
+}
+
+h1{
+
+font-family:'Cinzel',serif;
+
+font-size:40px;
+
+text-align:center;
+
+line-height:1.5;
+
+margin-bottom:20px;
+
+background:linear-gradient(
+
+90deg,
+
+#ffffff,
+
+#8edcff,
+
+#d7a4ff,
+
+#ffffff);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+text-shadow:
+
+0 0 20px rgba(255,255,255,.18);
+
+}
+
+.date{
+
+text-align:center;
+
+font-size:21px;
+
+margin-bottom:70px;
+
+opacity:.8;
+
+}
+
+.verse{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1.5s;
+
+font-size:33px;
+
+line-height:1.9;
+
+text-align:center;
+
+margin:65px 0;
+
+}
+
+.verse.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.highlight{
+
+color:#bfe8ff;
+
+text-shadow:
+
+0 0 15px #77d8ff,
+
+0 0 30px #8d8dff;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.highlight:hover{
+
+letter-spacing:3px;
+
+}
+
+#ending{
+
+text-align:center;
+
+padding:120px 20px;
+
+display:none;
+
+}
+
+#always{
+
+font-family:'Cinzel',serif;
+
+font-size:65px;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+#always:hover{
+
+transform:scale(1.1);
+
+text-shadow:
+
+0 0 25px white,
+
+0 0 70px #77d6ff,
+
+0 0 120px #d597ff;
+
+}
+
+#finalPhrase{
+
+margin-top:50px;
+
+display:none;
+
+font-size:30px;
+
+line-height:1.8;
+
+}
+
+canvas{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-5;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="aurora a1"></div>
+<div class="aurora a2"></div>
+
+<canvas id="particles"></canvas>
+
+<section id="intro">
+
+<div id="crystal">
+
+<div id="soul"></div>
+
+</div>
+
+<div id="touch">
+
+✦ TOCA EL CRISTAL Y DESPIERTA EL UNIVERSO ✦
+
+</div>
+
+</section>
+
+<section id="poem">
+
+<h1>
+✦ DONDE EL UNIVERSO ENCONTRÓ SU HOGAR<br>
+AL PRONUNCIAR TU ALMA ✦
+</h1>
+
+<div class="date">
+Domingo, 2 de agosto de 2026 — Bajo el abrazo eterno de la noche.
+  </div>
+
+  <!-- ========================================================= -->
+<!-- PARTE 2 — CONTINÚA DENTRO DE <section id="poem"> -->
+<!-- ========================================================= -->
+
+<div class="verse">
+Mi <span class="highlight">Aurora Celestial</span>,
+</div>
+
+<div class="verse">
+Esta noche el cielo no quiso llenarse únicamente de estrellas.
+<br><br>
+Quiso llenarse de recuerdos tuyos.
+<br><br>
+Quiso dibujar en cada rincón de la oscuridad el mapa exacto de tu sonrisa,
+porque incluso el infinito comprendió que ninguna constelación sería realmente hermosa
+mientras no llevara un pedacito de ti.
+</div>
+
+<div class="verse">
+Y aquí estoy...
+<br><br>
+Pensando en ti como quien contempla
+el milagro más grande
+que la vida pudo regalarle.
+</div>
+
+<div class="verse">
+Jamás imaginé
+que un corazón pudiera convertirse
+en un universo entero.
+<br><br>
+Pero llegaste tú...
+<br><br>
+Y el mío dejó de tener límites.
+</div>
+
+<div class="verse">
+Desde entonces,
+cada latido lleva tu nombre.
+<br><br>
+Cada sueño tiene el color de tus ojos.
+<br><br>
+Cada amanecer nace con la esperanza
+de volver a abrazarte.
+<br><br>
+Y cada noche,
+como esta,
+termina recordándome
+que el amor más inmenso que existe
+tiene exactamente tu rostro.
+</div>
+
+<div class="verse">
+Si pudiera caminar entre las estrellas,
+no iría buscando galaxias.
+<br><br>
+Buscaría la luz
+que más se pareciera a ti.
+<br><br>
+Aunque sé que fracasaría...
+<br><br>
+Porque ninguna estrella
+ha aprendido todavía
+a brillar con la ternura
+con la que tú iluminas mi vida.
+</div>
+
+<div class="verse">
+Eres la calma
+después de todas mis tormentas.
+<br><br>
+La respuesta
+que nunca supe formular.
+<br><br>
+El destino
+que jamás me atreví a imaginar.
+<br><br>
+El lugar
+donde mi alma aprendió,
+por primera vez,
+el verdadero significado
+de la palabra
+<span class="highlight">"hogar"</span>.
+</div>
+
+<div class="verse">
+Y mientras el mundo continúa girando
+sin detenerse...
+<br><br>
+Mi corazón
+solo conoce una dirección:
+<br><br>
+<span class="highlight">la tuya.</span>
+</div>
+
+<div class="verse">
+Porque todo lo que soy...
+<br><br>
+termina encontrándote.
+</div>
+
+<div class="verse">
+A veces me pregunto
+cuántas casualidades
+tuvieron que reunirse
+para que nuestras vidas coincidieran.
+</div>
+
+<div class="verse">
+Entonces sonrío...
+<br><br>
+Porque ya no creo
+que haya sido casualidad.
+</div>
+
+<div class="verse">
+Creo que Dios
+tomó dos corazones
+que todavía no sabían
+cuánto podían amar...
+<br><br>
+Y decidió escribir
+una historia
+que solamente nosotros
+podríamos vivir.
+</div>
+
+<div class="verse">
+Una historia
+donde cada espera
+hace más valioso
+cada abrazo.
+<br><br>
+Donde cada despedida
+solo prepara
+un reencuentro
+más hermoso.
+<br><br>
+Donde cada
+"te extraño"
+termina convirtiéndose
+en un
+<span class="highlight">"por fin estás aquí".</span>
+</div>
+
+<div class="verse">
+Y si tuviera que volver
+a empezar mi vida
+desde el principio...
+</div>
+
+<div class="verse">
+Elegiría volver
+a encontrarte.
+</div>
+
+<div class="verse">
+Volvería a enamorarme
+de tu manera de reír.
+<br><br>
+De esa dulzura
+que habita en tu voz.
+<br><br>
+De la paz
+que siento
+cuando simplemente
+existes cerca de mí.
+</div>
+
+<div class="verse">
+Volvería a elegirte
+una y otra vez...
+<br><br>
+Mil veces.
+<br><br>
+Un millón de veces.
+<br><br>
+En cada vida
+que pudiera existir
+después de esta.
+</div>
+
+<div class="verse">
+Porque mi corazón
+ya tomó una decisión
+que ni el tiempo
+podrá cambiar.
+</div>
+
+<div class="verse">
+<span class="highlight">
+Amarte.
+</span>
+</div>
+
+<div class="verse">
+Y permanecer enamorado de ti
+hasta el último latido
+que el universo permita escuchar
+dentro de mi pecho.
+</div>
+
+<div class="verse">
+Quisiera que esta noche
+pudieras mirar el cielo
+por un instante...
+</div>
+
+<div class="verse">
+No para contar estrellas.
+<br><br>
+Sino para imaginar
+que cada una guarda
+un "te amo"
+que todavía
+no he podido decirte.
+</div>
+
+<div class="verse">
+Porque las palabras
+comenzaron
+a quedarse pequeñas...
+</div>
+
+<div class="verse">
+Ya no alcanzan
+para describir
+lo mucho
+que significas para mí.
+</div>
+
+<div class="verse">
+Ya no existen
+idiomas suficientes
+para explicar
+lo profundamente
+enamorado que estoy de ti.
+</div>
+
+<div class="verse">
+Ni existe un reloj
+capaz de medir
+cuánto te esperaré
+siempre que sea necesario.
+</div>
+
+<div class="verse">
+Porque el amor
+que siento por ti
+dejó de pertenecer
+al tiempo.
+<br><br>
+Ahora pertenece
+a la
+<span class="highlight">eternidad.</span>
+</div>
+
+<!-- ========================================================= -->
+<!-- PARTE 3 -->
+<!-- Continúa inmediatamente después de la última estrofa de la Parte 2 -->
+<!-- ========================================================= -->
+
+<div class="verse">
+Y aunque mañana cambien los calendarios...
+<br><br>
+Aunque pasen los meses...
+<br><br>
+Aunque los años aprendan
+a llevar otros nombres...
+</div>
+
+<div class="verse">
+Habrá algo
+que permanecerá
+exactamente igual.
+</div>
+
+<div class="verse">
+Mi forma de mirarte.
+<br><br>
+Mi manera de elegirte.
+<br><br>
+Mi deseo inmenso
+de construir
+cada uno de mis futuros
+contigo.
+</div>
+
+<div class="verse">
+Quiero ser
+quien sostenga tu mano
+cuando tengas miedo.
+<br><br>
+Quiero ser
+quien celebre contigo
+cada una de tus victorias.
+<br><br>
+Quiero ser
+quien bese tus lágrimas
+antes de que puedan caer.
+</div>
+
+<div class="verse">
+Quiero ser
+el refugio
+donde tu corazón
+siempre encuentre paz.
+</div>
+
+<div class="verse">
+Y también quiero seguir siendo
+ese hombre
+que jamás dejará
+de sorprenderse
+por la inmensa fortuna
+de llamarte
+<span class="highlight">"mi amor"</span>.
+</div>
+
+<div class="verse">
+Porque, créeme...
+</div>
+
+<div class="verse">
+Todavía me parece
+un milagro.
+<br><br>
+Todavía siento
+mariposas
+cuando pienso en ti.
+<br><br>
+Todavía sonrío
+sin darme cuenta
+cuando alguien
+pronuncia tu nombre.
+</div>
+
+<div class="verse">
+Todavía descubro
+nuevas razones
+para enamorarme de ti
+incluso después
+de haberte entregado
+por completo
+mi corazón.
+</div>
+
+<div class="verse">
+Y eso es
+lo más hermoso...
+</div>
+
+<div class="verse">
+Porque nuestro amor
+no se está terminando...
+<br><br>
+Está aprendiendo
+nuevas formas
+de crecer
+cada día.
+</div>
+
+<div class="verse">
+Esta noche
+quiero hacerle
+una promesa
+al cielo.
+</div>
+
+<div class="verse">
+Prometo seguir cuidando
+de este amor
+con toda la delicadeza
+que merece.
+</div>
+
+<div class="verse">
+Prometo seguir
+aprendiendo
+a amarte mejor.
+</div>
+
+<div class="verse">
+Prometo no dejar
+que la rutina
+apague jamás
+la magia
+que existe
+entre nosotros.
+</div>
+
+<div class="verse">
+Y prometo que,
+incluso cuando
+mis cabellos
+algún día
+se llenen de plata...
+</div>
+
+<div class="verse">
+Buscarán las tuyas
+exactamente
+con el mismo amor
+con el que
+las buscarían hoy.
+</div>
+
+<div class="verse">
+Porque tú
+no eres solamente
+el amor
+de mi presente.
+</div>
+
+<div class="verse">
+Eres la ilusión
+de todos
+mis mañanas.
+<br><br>
+La paz
+de todos
+mis silencios.
+<br><br>
+La razón más bonita
+por la que
+mi corazón
+decidió creer
+para siempre
+en el amor.
+</div>
+
+<div class="verse">
+Así que,
+mientras esta noche
+continúa abrazando
+al mundo
+con su inmenso
+manto de estrellas...
+</div>
+
+<div class="verse">
+Yo solo quiero
+susurrarte
+una última verdad...
+</div>
+
+<div class="verse">
+Si algún día
+el universo
+tuviera que elegir
+entre seguir brillando
+o dejarme
+seguir amándote...
+</div>
+
+<div class="verse">
+Estoy completamente seguro
+de que escogería
+apagar
+todas sus estrellas.
+</div>
+
+<div class="verse">
+Porque incluso él sabe...
+</div>
+
+<div class="verse">
+Que nada ilumina más
+la eternidad...
+</div>
+
+<div class="verse">
+Que el inmenso amor
+que vive
+dentro de mi corazón
+por ti.
+</div>
+
+<div class="verse">
+Buenas noches,
+<span class="highlight">mi Aurora Celestial.</span>
+</div>
+
+<div class="verse">
+Que tus sueños
+sean tan infinitamente hermosos
+como el amor
+que llevo guardado
+para ti.
+</div>
+
+<div class="verse">
+Y que cuando despiertes mañana...
+</div>
+
+<div class="verse">
+Recuerda
+que existe
+un corazón
+que incluso
+mientras el mundo duerme...
+</div>
+
+<div class="verse">
+Continúa pronunciando
+tu nombre
+con el mismo amor...
+<br><br>
+
+La misma pasión...
+<br><br>
+
+Y la misma certeza
+con la que
+el universo
+pronuncia
+la palabra
+
+<span class="highlight">ETERNIDAD.</span>
+</div>
+
+</section>
+
+<section id="ending">
+
+<div id="always">
+✦ SIEMPRE ✦
+</div>
+
+<div id="finalPhrase">
+
+El universo encontró su hogar...
+<br><br>
+
+Porque primero encontró tu alma.
+
+</div>
+
+</section>
+
+<script>
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<180;i++){
+
+const s=document.createElement("div");
+
+s.className="star";
+
+const size=Math.random()*3+1;
+
+s.style.width=size+"px";
+s.style.height=size+"px";
+
+s.style.left=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
+
+s.style.animationDuration=(2+Math.random()*5)+"s";
+
+stars.appendChild(s);
+
+s.addEventListener("click",()=>{
+
+for(let j=0;j<12;j++){
+
+const p=document.createElement("div");
+
+p.style.position="fixed";
+p.style.left=s.getBoundingClientRect().left+"px";
+p.style.top=s.getBoundingClientRect().top+"px";
+p.style.width="4px";
+p.style.height="4px";
+p.style.borderRadius="50%";
+p.style.background="white";
+p.style.pointerEvents="none";
+p.style.boxShadow="0 0 15px white";
+p.style.transition="1s";
+
+document.body.appendChild(p);
+
+requestAnimationFrame(()=>{
+
+p.style.transform=
+`translate(${(Math.random()-.5)*160}px,
+${(Math.random()-.5)*160}px)`;
+
+p.style.opacity="0";
+
+});
+
+setTimeout(()=>p.remove(),1000);
+
+}
+
+});
+
+}
+
+const crystal=document.getElementById("crystal");
+
+const intro=document.getElementById("intro");
+
+const poem=document.getElementById("poem");
+
+crystal.onclick=()=>{
+
+crystal.animate([
+
+{
+
+transform:"scale(1) rotate(0deg)",
+
+opacity:1
+
+},
+
+{
+
+transform:"scale(2.8) rotate(30deg)",
+
+opacity:0
+
+}
+
+],{
+
+duration:1800,
+
+fill:"forwards"
+
+});
+
+setTimeout(()=>{
+
+intro.style.display="none";
+
+poem.style.display="block";
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+},1600);
+
+};
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.25
+});
+
+document.querySelectorAll(".verse")
+.forEach(v=>observer.observe(v));
+
+const canvas=document.getElementById("particles");
+
+const ctx=canvas.getContext("2d");
+
+function resize(){
+
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+
+}
+
+resize();
+
+addEventListener("resize",resize);
+
+const particles=[];
+
+for(let i=0;i<120;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+
+y:Math.random()*canvas.height,
+
+r:Math.random()*2+1,
+
+v:Math.random()*0.3+0.1
+
+});
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+
+ctx.fillStyle="rgba(255,255,255,.8)";
+
+ctx.fill();
+
+p.y-=p.v;
+
+if(p.y<0){
+
+p.y=canvas.height;
+
+p.x=Math.random()*canvas.width;
+
+}
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+const end=document.getElementById("ending");
+
+window.addEventListener("scroll",()=>{
+
+if(window.innerHeight+window.scrollY>=document.body.offsetHeight-120){
+
+end.style.display="block";
+
+}
+
+});
+
+const always=document.getElementById("always");
+
+const phrase=document.getElementById("finalPhrase");
+
+always.onclick=()=>{
+
+document.body.animate([
+  {
+background:"#03040b"
+},
+{
+background:"#071d36"
+},
+{
+background:"#2a1047"
+},
+{
+background:"#03040b"
+}
+],{
+duration:5000,
+iterations:1
+});
+
+phrase.style.display="block";
+
+phrase.animate(
+[
+{
+opacity:0,
+transform:"translateY(40px) scale(.9)"
+},
+{
+opacity:1,
+transform:"translateY(0) scale(1)"
+}
+],
+{
+duration:2200,
+fill:"forwards",
+easing:"ease"
+}
+);
+
+createFinalConstellation();
+
+};
+
+function createFinalConstellation(){
+
+const total=180;
+
+for(let i=0;i<total;i++){
+
+const star=document.createElement("div");
+
+star.style.position="fixed";
+star.style.width="4px";
+star.style.height="4px";
+star.style.borderRadius="50%";
+star.style.background="white";
+star.style.boxShadow="0 0 12px white";
+star.style.left=Math.random()*innerWidth+"px";
+star.style.top=Math.random()*innerHeight+"px";
+star.style.pointerEvents="none";
+star.style.transition="all 4s ease";
+
+document.body.appendChild(star);
+
+setTimeout(()=>{
+
+const t=i/total*Math.PI*2;
+
+const x=innerWidth/2+230*Math.pow(Math.sin(t),3);
+
+const y=innerHeight/2-
+(
+170*Math.cos(t)
+-
+70*Math.cos(2*t)
+-
+25*Math.cos(3*t)
+-
+10*Math.cos(4*t)
+);
+
+star.style.left=x+"px";
+star.style.top=y+"px";
+
+},80);
+
+setTimeout(()=>{
+
+const angle=i/total*Math.PI*2;
+
+const r=180;
+
+const x=innerWidth/2+r*Math.cos(angle);
+
+const y=innerHeight/2+r*Math.sin(angle);
+
+star.style.left=x+"px";
+star.style.top=y+"px";
+
+},7000);
+
+setTimeout(()=>{
+
+star.style.opacity="0";
+
+},11500);
+
+setTimeout(()=>{
+
+star.remove();
+
+},13000);
+
+}
+
+}
+
+/*==================================
+NEBULOSAS AL MANTENER PRESIONADO
+==================================*/
+
+let pressInterval;
+
+document.body.addEventListener("pointerdown",(e)=>{
+
+pressInterval=setInterval(()=>{
+
+const n=document.createElement("div");
+
+n.style.position="fixed";
+n.style.width="180px";
+n.style.height="180px";
+n.style.borderRadius="50%";
+n.style.pointerEvents="none";
+n.style.left=(e.clientX-90)+"px";
+n.style.top=(e.clientY-90)+"px";
+n.style.filter="blur(45px)";
+n.style.opacity=".35";
+
+const colors=[
+"rgba(115,220,255,.35)",
+"rgba(214,142,255,.30)",
+"rgba(255,255,255,.20)"
+];
+
+n.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+document.body.appendChild(n);
+
+n.animate([
+{
+opacity:.35,
+transform:"scale(.5)"
+},
+{
+opacity:0,
+transform:"scale(2.5)"
+}
+],
+{
+duration:2400,
+fill:"forwards"
+});
+
+setTimeout(()=>{
+
+n.remove();
+
+},2400);
+
+},300);
+
+});
+
+document.body.addEventListener("pointerup",()=>{
+
+clearInterval(pressInterval);
+
+});
+
+document.body.addEventListener("pointerleave",()=>{
+
+clearInterval(pressInterval);
+
+});
+
+/*==================================
+PALABRAS ILUMINADAS
+==================================*/
+
+document.querySelectorAll(".highlight").forEach(word=>{
+
+word.addEventListener("mouseenter",()=>{
+
+for(let i=0;i<15;i++){
+
+const dot=document.createElement("div");
+
+dot.style.position="fixed";
+dot.style.width="3px";
+dot.style.height="3px";
+dot.style.borderRadius="50%";
+dot.style.pointerEvents="none";
+dot.style.background="#ffffff";
+dot.style.left=(word.getBoundingClientRect().left+
+word.offsetWidth/2)+"px";
+dot.style.top=(word.getBoundingClientRect().top+10)+"px";
+dot.style.boxShadow="0 0 15px white";
+dot.style.transition="1.3s";
+
+document.body.appendChild(dot);
+
+requestAnimationFrame(()=>{
+
+dot.style.transform=
+`translate(${(Math.random()-.5)*120}px,
+${(Math.random()-.5)*120}px)`;
+
+dot.style.opacity="0";
+
+});
+
+setTimeout(()=>{
+
+dot.remove();
+
+},1300);
+
+}
+
+});
+
+});
+
+/*==================================
+PARALLAX SUAVE
+==================================*/
+
+window.addEventListener("mousemove",(e)=>{
+
+const x=(e.clientX/window.innerWidth-.5)*25;
+
+const y=(e.clientY/window.innerHeight-.5)*25;
+
+document.querySelectorAll(".aurora").forEach(a=>{
+
+a.style.transform=
+`translate(${x}px,${y}px)`;
+
+});
+
+});
+
+/*==================================
+DESTELLOS AUTOMÁTICOS
+==================================*/
+
+setInterval(()=>{
+
+const flash=document.createElement("div");
+
+flash.style.position="fixed";
+flash.style.left=Math.random()*100+"vw";
+flash.style.top=Math.random()*100+"vh";
+flash.style.width="2px";
+flash.style.height="2px";
+flash.style.borderRadius="50%";
+flash.style.background="white";
+flash.style.boxShadow="0 0 20px white";
+flash.style.pointerEvents="none";
+
+document.body.appendChild(flash);
+
+flash.animate([
+{
+opacity:0,
+transform:"scale(.5)"
+},
+{
+opacity:1,
+transform:"scale(3)"
+},
+{
+opacity:0,
+transform:"scale(.5)"
+}
+],
+{
+duration:1800,
+fill:"forwards"
+});
+
+setTimeout(()=>{
+
+flash.remove();
+
+},1800);
+
+},900);
+
+</script>
+
+</body>
+</html>
